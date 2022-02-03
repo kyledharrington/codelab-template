@@ -1,9 +1,9 @@
 id: dt-codelab-template
-summary: Dynatrace Codelab Template
+summary: Dynatrace SE Workshop Template
 author: Kyle Harrington
 last update: 2/2/22
 
-# How to Write a DT Codelab
+# DT Workshop & Code Lab Template
 <!-- ------------------------ -->
 ## Overview 
 Duration: 5
@@ -16,21 +16,22 @@ Provide a executive summary of the topic we're going to cover
 - What problem are we solving?
 - what will they learn? 
 
+![ENVISION THE FUTURE!](img/concepts.png)
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 <!-- -------------------------->
 ## Technical Specification 
-Duration: 2
+Duration: 5
 
-### 
-Detail the technical requirements 
+### Detail the technical requirements 
 - Technologies in use
 - Relevant architecture/ network / traffic flow diagram
 - prerequisites for setup
-- VM specficication/ container/  host sizing, 
+- VM specification/ container/  host sizing, 
 - cli binaries / git repos/ other software needed 
 
-![I'm a relevant image!](img/smartscape.png)
+![I'm a relevant image!](img/lab-environment.png)
 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -40,12 +41,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ## Setup
 Duration: 15
 
-How to install the 
-- Technologies in use
-- Relevant architecture/ network / traffic flow diagram
-- prerequisites for setup
-- VM specficication/ container/  host sizing, 
-- cli binaries / git repos/ other software needed 
+### How to install or configure the workshop content
+1. Provide
+1. The 
+1. Steps
+1. Yo
+1. Install
+
+>$ copy paste commands are recommend
+
+
+Inline code formatting references: 
 
 ```javascript
 var s = "JavaScript syntax highlighting";
@@ -56,57 +62,53 @@ alert(s);
 s = "Python syntax highlighting"
 print s
 ```
- 
- 
+
 ```bash
 s="bash syntax highlighting"
 print $s
 ```
 
+> sudo make me a sammich
+
 ```
-copy paste commands
+sudo make me a sammich
 ```
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 <!-- ------------------------ -->
-## Code Snippets
-Duration: 3
+## Demo The New Functionality
+Duration: 30
 
-To include code snippets you can do a few things.
-- Inline highlighting can be done using the tiny tick mark on your keyboard: "`"
-- Embedded code
+### Make the sausage
+- execute the demo on how to solve the problem statement you posed
+- This might just be more steps (?)
 
-### JavaScript
+![I'm a relevant image!](img/livedemo.png)
 
-```javascript
-{
-  key1: "string",
-  key2: integer,
-  key3: "string"
-}
-```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-### Java
 
-```java
-for (statement 1; statement 2; statement 3) {
-  // code block to be executed
-}
-```
+<!-- -------------------------->
+## Wrap Up
+Duration: 5
+### What You Learned Today 
+Review all the points you made at the start:
+- What did you just learn?
+- Why is this gained knowledge important?
+- How will this knowledge now benefit your audience?
+- What problem have we solved?
+- Q&A 
 
 <!-- ------------------------ -->
-## Hyperlinking and Embedded Images
-Duration: 1
-### Hyperlinking
-[FREE- Dynatrace SaaS Trial](https://www.dynatrace.com/trial/)
-
-### Images
-![Hi there!](img/waving.gif)
-- You can add images to your git repository
-
-<!-- ------------------------ -->
-## Other Stuff
+### Supplemental Material
 Duration: 1
 
-Checkout the official documentation here: [Codelab Formatting Guide](https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md)
+
+- [Markdown Formatting Refernce](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [Codelab Formatting Guide](https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md)
+
+
+`have a great time`
+
+![kthnxbai](img/waving.gif)
