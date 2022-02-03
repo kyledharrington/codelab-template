@@ -40,12 +40,32 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ## Setup
 Duration: 15
 
-Detail the technical requirements 
+How to install the 
 - Technologies in use
 - Relevant architecture/ network / traffic flow diagram
 - prerequisites for setup
 - VM specficication/ container/  host sizing, 
 - cli binaries / git repos/ other software needed 
+
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+ 
+```python
+s = "Python syntax highlighting"
+print s
+```
+ 
+ 
+```bash
+s="Python syntax highlighting"
+print $s
+```
+
+```
+No language indicated, so no syntax highlighting. 
+```
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 

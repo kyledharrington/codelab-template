@@ -1,0 +1,17 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2022-02-02T16:20:19-08:00",
+  "id": "dt-codelab-template",
+  "duration": 27,
+  "title": "How to Write a DT Codelab",
+  "summary": "Dynatrace Codelab Template",
+  "source": "README.md",
+  "theme": "",
+  "status": null,
+  "category": null,
+  "tags": [],
+  "url": "dt-codelab-template"
+}
