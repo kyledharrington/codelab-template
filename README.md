@@ -1,4 +1,4 @@
-id: dt-codelab-template
+id: dt-workshop-template
 summary: Dynatrace SE Workshop Template
 author: Kyle Harrington
 last update: 2/2/22
