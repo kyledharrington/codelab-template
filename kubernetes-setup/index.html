@@ -1,0 +1,138 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Dynatrace K8s Operator Install &amp; Walk Through</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="kubernetes-setup"
+                  title="Dynatrace K8s Operator Install &amp; Walk Through"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Overview" duration="5">
+        <h2 is-upgraded>What You&#39;ll Learn Today</h2>
+<p>Today we will cover the installation and value provided by the <a href="https://github.com/Dynatrace/dynatrace-operator" target="_blank">Dynatrace Kubernetes Operator deployment</a></p>
+<p>The Dynatrace operator is the k8s native way to gain full stack observability in your kubernetes and open shift environments. The Dynatrace operator provides continuous, automatic discovery &amp; observability across your kubernetes workloads. Leveraging Dynatrace, organizations can start Day 2 operations Day 1 and inform their shift left initiatives.</p>
+<p class="image-container"><img alt="ENVISION THE FUTURE!" src="img/6346b14ce9438bb8.png"></p>
+<p>In today&#39;s lab we will:</p>
+<ol type="1">
+<li>Stand up an new kubernetes cluster</li>
+<li>Deploy the Dynatrace Operator</li>
+<li>Deploy a Microservice sample application</li>
+<li>Configure Real User Monitoring for our sample application</li>
+<li>Set up synthetic checks</li>
+<li>Review the full stack data collected by Dynatrace</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Technical Specification" duration="5">
+        <h2 is-upgraded>Detail the technical requirements</h2>
+<h3 is-upgraded>Prerequisites:</h3>
+<ul>
+<li>https://www.dynatrace.com/trial/</li>
+</ul>
+<p>|Requirement|Source|<br> |—|—| | Dynatrace SasS Tenant| https://www.dynatrace.com/trial/ | kubectl cli | https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/ |</p>
+<ul>
+<li>Technologies in use</li>
+<li>Relevant architecture/ network / traffic flow diagram</li>
+<li>prerequisites for setup</li>
+<li>VM specification/ container/  host sizing,</li>
+<li>cli binaries / git repos/ other software needed</li>
+</ul>
+<p class="image-container"><img alt="I’m a relevant image!" src="img/c45b1bf7cbe1775e.png"></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Setup" duration="15">
+        <h2 is-upgraded>How to install or configure the workshop content</h2>
+<ol type="1">
+<li>Provide</li>
+<li>The</li>
+<li>Steps</li>
+<li>Yo</li>
+<li>Install</li>
+</ol>
+<p>$ copy paste commands are recommend</p>
+<p>Inline code formatting references:</p>
+<pre><code language="language-javascript" class="language-javascript">var s = &#34;JavaScript syntax highlighting&#34;;
+alert(s);
+</code></pre>
+<pre><code language="language-python" class="language-python">s = &#34;Python syntax highlighting&#34;
+print s
+</code></pre>
+<pre><code language="language-bash" class="language-bash">s=&#34;bash syntax highlighting&#34;
+print $s
+</code></pre>
+<p>sudo make me a sammich</p>
+<pre><code>sudo make me a sammich
+</code></pre>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Demo The New Functionality" duration="30">
+        <h2 is-upgraded>Make the sausage</h2>
+<ul>
+<li>execute the demo on how to solve the problem statement you posed</li>
+<li>This might just be more steps (?)</li>
+</ul>
+<p class="image-container"><img alt="I’m a relevant image!" src="img/1ed9abf2a9ef097e.png"></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Wrap Up" duration="1">
+        <h2 is-upgraded>What You Learned Today</h2>
+<p>Review all the points you made at the start:</p>
+<ul>
+<li>What did you just learn?</li>
+<li>Why is this gained knowledge important?</li>
+<li>How will this knowledge now benefit your audience?</li>
+<li>What problem have we solved?</li>
+<li>Q&amp;A</li>
+</ul>
+<h2 is-upgraded>Supplemental Material</h2>
+<ul>
+<li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown Formatting Refernce</a></li>
+<li><a href="https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md" target="_blank">Codelab Formatting Guide</a></li>
+</ul>
+<p><code>have a great time</code></p>
+<p class="image-container"><img alt="kthnxbai" src="img/26975da5191ea0ca.gif"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
