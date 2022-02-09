@@ -140,18 +140,26 @@ Here you can your newly deployed cluster and any other k8s cluster you may have 
 ![step14](img/gcp16.png)
 <!-- ------------------------ -->
 
+## LAB: The Kubernetes API Integration 
+Duration: 5 
 
+### Lets review the data Dynatrace has collected already:
+Out of the box, Dynatrace automatically collects telemetry for
+- Cluster utilization metrics
+    - CPU & Memory Usage, Request and Limits
+- Kubernetes Workload Metrics Aggregated by
+    - Workload Type
+    - Pods
+    - Namespaces
+- Kubernetes Vulnerabilities  
 
-## LAB: The New Functionality
-Duration: 30
+![step14](img/gcp17.png)
 
-### Make the sausage
-- execute the demo on how to solve the problem statement you posed
-- This might just be more steps (?)
+- Lets also note what is missing, Kubernetes events. We configured Dynatrace to capture all events in this cluster in our last step. We will now create a new application deployment which will populate Kubernetes native events in our dashboard
+<!-- -------------------------->
 
-![I'm a relevant image!](img/livedemo.png)
+### LAB: Deploying the Google Micro Services Application 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 <!-- -------------------------->
 ## Wrap Up
