@@ -138,8 +138,8 @@ Here you can your newly deployed cluster and any other k8s cluster you may have 
     - "Opt in to the Kubernetes events integration for analysis and alerting"
 1. Click on "Save Changes"
 ![step14](img/gcp16.png)
-<!-- ------------------------ -->
 
+<!-- ------------------------ -->=
 ## LAB: The Kubernetes API Integration 
 Duration: 5 
 
@@ -158,7 +158,7 @@ Out of the box, Dynatrace automatically collects telemetry for
 - Lets also note what is missing, Kubernetes events. We configured Dynatrace to capture all events in this cluster in our last step. We will now create a new application deployment which will populate Kubernetes native events in our dashboard
 <!-- -------------------------->
 
-### LAB: Deploying the Google Micro Services Application 
+## LAB: Deploying the Google Micro Services Application 
 
 
 <!-- -------------------------->
