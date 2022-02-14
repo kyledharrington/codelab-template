@@ -151,7 +151,7 @@ Out of the box, Dynatrace automatically collects telemetry for
     - Workload Type
     - Pods
     - Namespaces
-- Kubernetes Vulnerabilities  
+- Kubernetes Vulnerabilities(!?)
 
 ![step14](img/gcp17.png)
 
@@ -160,17 +160,83 @@ Out of the box, Dynatrace automatically collects telemetry for
 
 ## LAB: Deploying the Google Micro Services Application 
 
+Now we will deploy our sample application. We will use the Google Microservices demo application "Online boutique", this version has been branched from the [original] (https://github.com/GoogleCloudPlatform/microservices-demo)
+> `NEED TO UPDATE REPO WITH HARRINGTON NGINX CONFIG INSTALLER`
+
+1. Run 
+    >kubectl apply -f release/kubernetes-manifests.yaml
+1. Wait for the resources to become ready in your cluster
+1. Verify all pods are running
+    >kubectl get pods
+
+1. Once all  your pods are running we'll want to access the web application. Run 
+1. >  kubectl get service nginx
+    ```
+    NAME    TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)        AGE
+    nginx   LoadBalancer   10.96.1.110   34.82.179.37   80:30457/TCP   54m
+    ```
+1. Copy the EXTERNAL-IP address and paste it into a browser:
+    ![step14](img/gcp18.png)
+
+<!-- -------------------------->
+
+## LAB: Creating a custom application
+
+Now that your application is running we will setup a custom application to review real user traffic
+1. Navigate to _settings --> web and mobile monitoring -->  application dectection
+1. click on "Add Detection Rule" 
+    ![step14](img/gcp19.png)
+1. Add a new rule with the following:
+    - new application
+    - name: "micro services demo"
+    - define the rule as:  "if the url" "contains"
+    - paste the url of the front end service
+    - Click "Save"
+    
+    ![step14](img/gcp20.png)
+    - 
+1. Now that the application has been configured, navigate back your browser and lets explore the online boutique app. Dynatrace has already instrumented the web and infrastructure layer all we need now is some traffic! Take a minute to send some traffic to the application frontend.
+
+<!-- -------------------------->
+
+## LAB: Exploring The Telemetry Collected by Dynatrace
+
+While we configured the front end of the application, the OneAgent daemonset we deployed earlier has been collecting our newly deployed application's telemetry data. 
+
+1. In your Dynatrace tenant, navigate to _INFRASTRUCTURE --> KUBERNETES_
+1. If we scroll down to the events section, we'll see that this now populating k8s native events from the google microservices deployment:
+    - Image pulls
+    - New scheduling events
+    - Pod starts
+
+    ![step14](img/gcp21.png)
+
+Further, if any issues like image pull back offs or OOM errors were taking place, Dynatrace will automatically populate that information in this screen. Next lets review how we can review the telemetry data which is being collected by Dynatrace. 
+
+1. Navigate to _applications & microservices --> front end --> Microservices Demo_ 
+    ![step14](img/gcp22.png)
+1. From this view we can see all of the webfront end interactions which dyantrace is instrumenting out of the box:
+    - End user load actions
+    -Enduser interactions with the front end website
+    - apdex
+All of these are being instrumented out of the box with dynatrace full stack observability 
+![step14](img/gcp23.png)
+1. Next lets click on _"service" --> "view service flow"_
+1. 
+
+
 
 <!-- -------------------------->
 ## Wrap Up
 Duration: 5
-### What You Learned Today 
-Review all the points you made at the start:
-- What did you just learn?
-- Why is this gained knowledge important?
-- How will this knowledge now benefit your audience?
-- What problem have we solved?
-- Q&A 
+### Lab recap
+Today we reviewed how the dynatrace platform can be leveraged to provide full stack observability across your kubernetes environments. To you learned how to
+
+1. Stand up up an new kubernetes cluster
+1. Deploy the Dynatrace Operator
+1. Deploy a Microservice sample application
+1. Configure Real User Monitoring for our sample application
+1. Set up synthetic checks 
 
 <!-- ------------------------ -->
 ### Supplemental Material
@@ -179,8 +245,3 @@ Duration: 1
 
 - [Markdown Formatting Refernce](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [Codelab Formatting Guide](https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md)
-
-
-`have a great time`
-
-![kthnxbai](img/waving.gif)
