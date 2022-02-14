@@ -1,7 +1,7 @@
 id: dt-kubernetes-setup
 summary: Dynatrace K8s Operator Install & Walk Through
 author: Kyle Harrington
-last update: 2/7/22
+last update: 2/14/22
 
 # Dynatrace K8s Operator Install & Walk Through
 <!-- ------------------------ -->
