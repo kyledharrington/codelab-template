@@ -159,6 +159,7 @@ Out of the box, Dynatrace automatically collects telemetry for
 <!-- -------------------------->
 
 ## LAB: Deploying the Google Micro Services Application 
+Duration: 10 
 
 Now we will deploy our sample application. We will use the Google Microservices demo application "Online boutique", this version has been branched from the [original] (https://github.com/GoogleCloudPlatform/microservices-demo)
 > `NEED TO UPDATE REPO WITH HARRINGTON NGINX CONFIG INSTALLER`
@@ -181,6 +182,7 @@ Now we will deploy our sample application. We will use the Google Microservices 
 <!-- -------------------------->
 
 ## LAB: Creating a custom application
+Duration: 15
 
 Now that your application is running we will setup a custom application to review real user traffic
 1. Navigate to _settings --> web and mobile monitoring -->  application dectection
@@ -200,6 +202,7 @@ Now that your application is running we will setup a custom application to revie
 <!-- -------------------------->
 
 ## LAB: Exploring The Telemetry Collected by Dynatrace
+Duration: 15
 
 While we configured the front end of the application, the OneAgent daemonset we deployed earlier has been collecting our newly deployed application's telemetry data. 
 
@@ -222,7 +225,47 @@ Further, if any issues like image pull back offs or OOM errors were taking place
 All of these are being instrumented out of the box with dynatrace full stack observability 
 ![step14](img/gcp23.png)
 1. Next lets click on _"service" --> "view service flow"_
-1. 
+1. This view shows how both our traffic and the synthetic checks are generating traffic in our application.
+1. The front end webserver is routing traffic through the nginx front end through all the microservices we've deployed:
+
+    Dynatrace automatically instruments all transactions across all the containers we've deployed and any future deployments as well.
+![step14](img/gcp24.png)
+
+<!-- -------------------------->
+
+## LAB: Kubernetes Scaling with Dynatrace
+Duration: 15 
+
+Now that we've seen how to dynatrace instruments an existing application lets see how dynatrace handles and instruments pods scaling. 
+
+1. Back in the cloud console lets see how many pods are currently runnings
+    > kubectl get pod
+1. Your console should return similar to the below:
+![step14](img/gcp25.png)
+    > kubectl get deployments
+
+1. Lets take a look a the deployments in the namespace, specifically the cart service
+![step14](img/gcp26.png)
+1. Lets scale the cart service up to 100 pods
+    > kubectl scale deployment cartservice --replicas=100
+1. This will begin spinning up new pods. You can see this by running:
+    > kubectl get pod
+    ![step14](img/gcp27.png)
+1.  Navigate to _Kubernetes Engine --> Clusters --> Workloads_
+      ![step14](img/gcp28.png)
+1. From here we can immediately see that dynatrace has found an issue with trying to scale up the 100 pods we requested:
+    - all pods have been grouped together under the cart service work load 
+    - only 48 of the 100 we we requested we scheduleable 
+    - Dynatrace has automatically created a problem beacuase of the resource contention
+  ![step14](img/gcp29.png)
+1. With this information, Dynatrace can be leveraged to proactively scale these nodes or descrease the pods scaling to resolve the resouce contention.
+ ![step14](img/gcp30.png)
+1. Lets scale the pods back down 
+    > kubectl scale deployment cartservice --replicas=10
+1. From the workload level we can see the scaling events taking place:
+     ![step14](img/gcp31.png)
+1. Once the pods stabilize dynatrace will automatically close this problem:
+    ![step14](img/gcp32.png)
 
 
 
