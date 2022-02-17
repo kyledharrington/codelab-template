@@ -139,7 +139,7 @@ Here you can your newly deployed cluster and any other k8s cluster you may have 
 1. Click on "Save Changes"
 ![step14](img/gcp16.png)
 
-<!-- ------------------------ -->=
+<!-- -------------------------->
 ## LAB: The Kubernetes API Integration 
 Duration: 5 
 
@@ -151,11 +151,13 @@ Out of the box, Dynatrace automatically collects telemetry for
     - Workload Type
     - Pods
     - Namespaces
-- Kubernetes Vulnerabilities(!?)
+- Kubernetes Vulnerabilities (`note: this module may not be enabled in your environment`)
 
 ![step14](img/gcp17.png)
 
-- Lets also note what is missing, Kubernetes events. We configured Dynatrace to capture all events in this cluster in our last step. We will now create a new application deployment which will populate Kubernetes native events in our dashboard
+Lets also note what is missing, *Kubernetes events!*
+
+ We configured Dynatrace to capture all events in this cluster in our last step (enabling "monitor events") We will now create a new application deployment which will populate Kubernetes native events in our dashboard
 <!-- -------------------------->
 
 ## LAB: Deploying the Google Micro Services Application 
