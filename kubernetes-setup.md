@@ -116,7 +116,10 @@ Duration: 15
     Kubernetes monitoring successfully setup.
     ```
 1. Verify that all pods have been succefully deployed by running
-    > kubectl get pods -n dynatrace
+
+    ```
+    kubectl get pods -n dynatrace
+    ```
 
     which should out put something similar to below: 
     ```
@@ -166,13 +169,18 @@ Duration: 10
 Now we will deploy our sample application. We will use the Google Microservices demo application "Online boutique", this version has been branched from the [original] (https://github.com/GoogleCloudPlatform/microservices-demo)
 
 1. Run 
-    >kubectl apply -f https://raw.githubusercontent.com/kyledharrington/dt-boutique/main/dt-boutique.yaml
+    ```
+    kubectl apply -f https://raw.githubusercontent.com/kyledharrington/dt-boutique/main/dt-boutique.yaml
+    ```
 1. Wait for the resources to become ready in your cluster
 1. Verify all pods are running
-    >kubectl get pods
-
-1. Once all  your pods are running we'll want to access the web application. Run 
-1. >  kubectl get service nginx
+    ```
+    kubectl get pods
+    ```
+1. Once all  your pods are running we'll want to access the web application. Run: 
+    ```
+    kubectl get service nginx
+    ```
     ```
     NAME    TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)        AGE
     nginx   LoadBalancer   10.96.1.110   34.82.179.37   80:30457/TCP   54m
@@ -240,17 +248,24 @@ Duration: 15
 Now that we've seen how to dynatrace instruments an existing application lets see how dynatrace handles and instruments pods scaling. 
 
 1. Back in the cloud console lets see how many pods are currently runnings
-    > kubectl get pod
+    ```
+    kubectl get pod
+    ```
 1. Your console should return similar to the below:
 ![step14](img/gcp25.png)
-    > kubectl get deployments
-
+    ```
+    kubectl get deployments
+    ```
 1. Lets take a look a the deployments in the namespace, specifically the cart service
 ![step14](img/gcp26.png)
 1. Lets scale the cart service up to 100 pods
-    > kubectl scale deployment cartservice --replicas=100
+    ```
+    kubectl scale deployment cartservice --replicas=100
+    ```
 1. This will begin spinning up new pods. You can see this by running:
-    > kubectl get pod
+    ```
+    kubectl get pods
+    ```
     ![step14](img/gcp27.png)
 1.  Navigate to _Kubernetes Engine --> Clusters --> Workloads_
       ![step14](img/gcp28.png)
@@ -262,7 +277,9 @@ Now that we've seen how to dynatrace instruments an existing application lets se
 1. With this information, Dynatrace can be leveraged to proactively scale these nodes or descrease the pods scaling to resolve the resouce contention.
  ![step14](img/gcp30.png)
 1. Lets scale the pods back down 
-    > kubectl scale deployment cartservice --replicas=10
+    ```
+    kubectl scale deployment cartservice --replicas=10
+    ```
 1. From the workload level we can see the scaling events taking place:
      ![step14](img/gcp31.png)
 1. Once the pods stabilize dynatrace will automatically close this problem:
@@ -282,10 +299,3 @@ Today we reviewed how the dynatrace platform can be leveraged to provide full st
 1. Configure Real User Monitoring for our sample application
 1. Set up synthetic checks 
 
-<!-- ------------------------ -->
-### Supplemental Material
-Duration: 1
-
-
-- [Markdown Formatting Refernce](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-- [Codelab Formatting Guide](https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md)
