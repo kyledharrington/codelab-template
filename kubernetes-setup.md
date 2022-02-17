@@ -164,10 +164,9 @@ Lets also note what is missing, *Kubernetes events!*
 Duration: 10 
 
 Now we will deploy our sample application. We will use the Google Microservices demo application "Online boutique", this version has been branched from the [original] (https://github.com/GoogleCloudPlatform/microservices-demo)
-> `NEED TO UPDATE REPO WITH HARRINGTON NGINX CONFIG INSTALLER`
 
 1. Run 
-    >kubectl apply -f release/kubernetes-manifests.yaml
+    >kubectl apply -f https://raw.githubusercontent.com/kyledharrington/dt-boutique/main/dt-boutique.yaml
 1. Wait for the resources to become ready in your cluster
 1. Verify all pods are running
     >kubectl get pods
