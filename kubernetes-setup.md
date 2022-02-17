@@ -30,12 +30,12 @@ The Dynatrace operator is the k8s native way to gain full stack observability in
 Duration: 5
 
 ### Technologies We Will Work With Today
-- Dynatrace SasS Tenant: https://www.dynatrace.com/trial/
-- kubectl cli:  https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
-- Kubernetes: https://kubernetes.io/
-- Google Kubernetes Engine: https://cloud.google.com
-- Google Microservices Demo: https://github.com/GoogleCloudPlatform/microservices-demo
-- Dynatrace Operator: https://github.com/Dynatrace/dynatrace-operator
+- [Dynatrace SasS Tenant](https://www.dynatrace.com/trial/)
+- [kubectl cli](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+- [Kubernetes](https://kubernetes.io/)
+- [Google Kubernetes Engine](https://cloud.google.com)
+- [Google Microservices Demo](https://github.com/GoogleCloudPlatform/microservices-demo)
+- [Dynatrace Operator](https://github.com/Dynatrace/dynatrace-operator)
 
 ### Dynatrace Operator Functionality Visualized: 
 
